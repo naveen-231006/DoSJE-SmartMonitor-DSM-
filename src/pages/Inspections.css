@@ -1,0 +1,188 @@
+/* ── Inspections Table ── */
+.insp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.insp-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-muted);
+  white-space: nowrap;
+}
+
+.insp-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-muted);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.insp-table tr:hover td {
+  background: var(--bg-card);
+}
+
+/* ── 2-col grid ── */
+.insp-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ── Blockchain Demo ── */
+.blockchain-demo__desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.blockchain-demo__flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.blockchain-demo__step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+}
+
+.blockchain-demo__step-num {
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.blockchain-demo__arrow {
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.blockchain-demo__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+
+.blockchain-demo__btn:hover {
+  opacity: 0.9;
+}
+
+.blockchain-demo__result {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blockchain-demo__hash {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.blockchain-demo__hash-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.blockchain-demo__hash code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--green);
+}
+
+.blockchain-demo__loading {
+  font-size: 0.78rem;
+  color: var(--amber);
+}
+
+/* ── Random Assignment ── */
+.random-assign {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.random-assign__layer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-sm);
+}
+
+.random-assign__icon {
+  color: var(--violet);
+  flex-shrink: 0;
+}
+
+.random-assign__title {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.random-assign__desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.random-assign__connector {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.random-assign__note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 10px 12px;
+  background: var(--accent-subtle);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .insp-grid-2 { grid-template-columns: 1fr; }
+  .blockchain-demo__flow { flex-direction: column; }
+  .blockchain-demo__arrow { transform: rotate(90deg); }
+}

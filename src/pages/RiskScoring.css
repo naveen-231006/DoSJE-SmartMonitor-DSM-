@@ -1,0 +1,233 @@
+/* ── Risk Layout ── */
+.risk-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 16px;
+}
+
+/* ── Sliders ── */
+.slider-group {
+  margin-bottom: 20px;
+}
+
+.slider-group:last-child {
+  margin-bottom: 0;
+}
+
+.slider-group__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.slider-group__label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider-group__weight {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  padding: 1px 6px;
+  background: var(--bg-card);
+  border-radius: 3px;
+}
+
+.slider-group__value {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.risk-slider {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--bg-hover);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: var(--fill) 100%;
+  background-repeat: no-repeat;
+}
+
+.risk-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg-secondary);
+  cursor: pointer;
+}
+
+.risk-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg-secondary);
+  cursor: pointer;
+}
+
+.slider-group__range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ── Score Gauge ── */
+.score-gauge {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+}
+
+.score-gauge__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.score-gauge__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.score-gauge__value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.score-gauge__label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Tier Badge ── */
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+/* ── Score Formula ── */
+.score-formula {
+  text-align: left;
+  padding: 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+}
+
+.score-formula h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+}
+
+.score-formula code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Tier Thresholds ── */
+.tier-thresholds {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tier-threshold {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border-left: 3px solid transparent;
+  transition: all var(--transition);
+}
+
+.tier-threshold--active {
+  border-left-color: var(--tc);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.tier-threshold__range {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  min-width: 60px;
+}
+
+/* ── Heatmap ── */
+.heatmap-wrap {
+  overflow-x: auto;
+}
+
+.heatmap-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.heatmap-table th {
+  padding: 8px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.heatmap-table td {
+  padding: 3px;
+  text-align: center;
+}
+
+.heatmap-table__state {
+  text-align: left !important;
+  padding: 6px 12px !important;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.heatmap-cell {
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .risk-layout { grid-template-columns: 1fr; }
+}
